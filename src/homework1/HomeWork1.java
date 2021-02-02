@@ -22,6 +22,7 @@ public class HomeWork1 {
 
         for (Participants participant : participants) {
             for (Barrier barrier : barriers) {
+                System.out.println("Участник " + participant.getName() + " ");
                 barrier.overcoming(participant);
             }
         }
