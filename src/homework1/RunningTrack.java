@@ -12,10 +12,10 @@ public class RunningTrack implements Barrier {
     @Override
     public boolean overcoming(Participants participant) {
         participant.run();
-        return participant.getMaxDistance() <= length;
+        return participant.getMaxDistance() >= length;
     }
 
-    public String getName() {
-        return name;
+    public String getNameAndParameters() {
+        return name + " длиной " + length + " метров.";
     }
 }

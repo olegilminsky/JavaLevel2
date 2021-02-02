@@ -4,11 +4,13 @@ public class Cat implements Participants {
     private String name;
     private int maxDistance;
     private float maxHeightJump;
+    private boolean atDistance;
 
     public Cat(String name, int maxDistance, float maxHeightJump) {
         this.name = name;
         this.maxDistance = maxDistance;
         this.maxHeightJump = maxHeightJump;
+        atDistance = true;
     }
 
     @Override
@@ -34,5 +36,15 @@ public class Cat implements Participants {
     @Override
     public float getMaxHeightJump() {
         return maxHeightJump;
+    }
+
+    @Override
+    public boolean getAtDistance() {
+        return atDistance;
+    }
+
+    @Override
+    public void setAtDistance(boolean atDistance) {
+        this.atDistance = atDistance;
     }
 }
