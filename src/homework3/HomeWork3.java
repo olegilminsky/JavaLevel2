@@ -21,6 +21,7 @@ public class HomeWork3 {
         phoneBook.add("Ильминский", "+7(915)465-72-85");
         phoneBook.add("Власов", "+7(999)555-66-66");
         phoneBook.add("Власов", "+7(888)777-22-55");
+        phoneBook.add("Власов", "+7(876)456-78-90");
         phoneBook.add("Суслов", "+7(333)444-88-99");
 
         System.out.println("Телефон Ильминского:" + phoneBook.get("Ильминский"));
