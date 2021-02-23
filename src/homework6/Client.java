@@ -3,21 +3,17 @@ package homework6;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Server {
-    public static final int PORT = 9090;
-    public static ServerSocket server;
-    public static Socket socket;
+public class Client {
+    private static final int PORT = 9090;
+    private static Socket socket;
 
     public static void main(String[] args) {
         try {
-            server = new ServerSocket(PORT);
-            System.out.println("Server started");
-            socket = server.accept();
-            System.out.println("Client connected");
+            socket = new Socket("localhost", PORT);
+            System.out.println("Client started");
 
             Scanner sc = new Scanner(System.in);
             DataInputStream inputStream = new DataInputStream(socket.getInputStream());
@@ -52,11 +48,6 @@ public class Server {
         } finally {
             try {
                 socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                server.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
